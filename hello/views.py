@@ -4,4 +4,11 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def hello_world(request):
-    return HttpResponse("Hello, World!")
+    return render(request, 'hello/sample.html', {'name': 'World'})
+
+
+def product_temp(request):
+    return render(request, 'hello/product.html')
+
+def about_us(request):
+    return render(request, 'hello/about.html')
